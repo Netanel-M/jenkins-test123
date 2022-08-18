@@ -13,7 +13,7 @@ pipeline {
         stage("Run script with argument") {
             steps {
                 echo "$COUNT"
-                sh 'python3 script.py $COUNT' > artifact.txt
+                sh 'python3 script.py $COUNT > artifact.txt'
             }
         }
         stage("Archive artifacts") {
