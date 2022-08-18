@@ -1,11 +1,13 @@
 
 pipeline {
     agent any
+    parameters {
+        string(name: count, defaultValue: 0)
+    }
+    
     options {
         timeout(time: 12, unit: 'HOURS')
-        parameters {
-            string(name: count, defaultValue: 0)
-        }
+
     }
     stages {
         stage("Begin") {
