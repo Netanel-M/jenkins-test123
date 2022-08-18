@@ -2,7 +2,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: count, defaultValue: "0")
+        string(name: COUNT, defaultValue: "0")
     }
     
     options {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Run script with argument") {
             steps {
-                echo "test"
+                sh "python3 script.py $params.COUNT"
             }
         }
     }
