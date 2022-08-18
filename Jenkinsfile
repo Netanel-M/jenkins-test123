@@ -1,6 +1,6 @@
 
 pipeline {
-    agent { docker 'alpine:latest' }
+    agent { docker { image 'alpine:latest' } }
     parameters {
         string(name: 'COUNT', defaultValue: '0')
     }
