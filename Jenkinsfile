@@ -2,7 +2,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: COUNT, defaultValue: "0")
+        text(name: COUNT, defaultValue: "0")
     }
     
     options {
