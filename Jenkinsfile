@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Run script with argument") {
             steps {
-                sh "python3 script.py $count"
+                echo "test"
             }
         }
     }
