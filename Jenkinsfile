@@ -3,16 +3,19 @@ pipeline {
     agent any
     options {
         timeout(time: 12, unit: 'HOURS')
+        parameters {
+            string(name: count, defaultValue: 0)
+        }
     }
     stages {
-        stage("Test") {
+        stage("Begin") {
             steps {
-                echo "Test!"
+                echo "Beginning build!"
             }
         }
-        stage("Testo") {
+        stage("Run script with argument") {
             steps {
-                echo "Test2!"
+                sh "python3 script.py $count"
             }
         }
     }
