@@ -2,7 +2,7 @@
 pipeline {
     agent {
         docker {
-             image 'alpine:latest' 
+             image 'python3:latest' 
              label 'linux'
              } 
         }
