@@ -13,5 +13,7 @@ pipeline {
         stage("Testo") {
             steps {
                 echo "Test2!"
+            }
+        }
     }
 }
