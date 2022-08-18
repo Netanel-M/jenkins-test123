@@ -1,6 +1,6 @@
 
 pipeline {
-    agent any
+    agent 'linux'
     parameters {
         string(name: 'COUNT', defaultValue: '0')
     }
