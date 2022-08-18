@@ -16,5 +16,10 @@ pipeline {
                 sh 'python3 script.py $COUNT'
             }
         }
+        stage("Archive artifacts") {
+            steps {
+                archiveArtifacts artifacts: '*.txt', followSymlinks: false
+            }
+        }
     }
 }

@@ -2,6 +2,6 @@
 
 import sys
 argument = sys.argv[1]
-
-for i in range(int(argument)):
-  print(i)
+with open("artifact.txt", "w") as file_handler:
+  for i in range(int(argument)):
+    file_handler.writelines([i])
