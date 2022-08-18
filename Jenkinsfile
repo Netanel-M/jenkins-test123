@@ -1,8 +1,6 @@
 
 pipeline {
-    agent {
-        label: 'linux'
-    }
+    agent { label 'linux' }
     parameters {
         string(name: 'COUNT', defaultValue: '0')
     }
