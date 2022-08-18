@@ -4,11 +4,6 @@ pipeline {
     parameters {
         text(name: COUNT, defaultValue: "0")
     }
-    
-    options {
-        timeout(time: 12, unit: 'HOURS')
-
-    }
     stages {
         stage("Begin") {
             steps {
