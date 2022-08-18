@@ -1,6 +1,9 @@
 
 pipeline {
-    agent { docker { image 'alpine:latest' } }
+    agent {
+        label 'linux' 
+        docker { image 'alpine:latest' } 
+        }
     parameters {
         string(name: 'COUNT', defaultValue: '0')
     }
